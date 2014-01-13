@@ -17,6 +17,8 @@ public class TipActivity extends Activity {
 
 	private void recalculateTip() {
 		RatingBar rbTipRating = (RatingBar) findViewById(R.id.rbServiceRating);
+		TextView tvTipRating = (TextView) findViewById(R.id.tvTipRating);
+
 		Resources res = getResources();
 		String strBillAmount = etBillAmount.getText().toString();
 
@@ -24,8 +26,6 @@ public class TipActivity extends Activity {
 			tvFinalTip.setText(res.getString(R.string.tip_messaging));
 			return;
 		}
-		
-		TextView tvTipRating = (TextView) findViewById(R.id.tvTipRating);
 		
 		String[] tip_rating = res.getStringArray(R.array.tip_rating);
 		tvTipRating.setText( tip_rating[(int) (rbTipRating.getRating()-1)] ); 
@@ -45,20 +45,20 @@ public class TipActivity extends Activity {
         setContentView(R.layout.activity_tip);
 
         etBillAmount = (EditText)findViewById(R.id.etBillAmount);
-        rbTipRating = (RatingBar)findViewById(R.id.rbServiceRating);
-        tvFinalTip = (TextView)findViewById(R.id.tvFinalTip);
+        rbTipRating  = (RatingBar)findViewById(R.id.rbServiceRating);
+        tvFinalTip   = (TextView)findViewById(R.id.tvFinalTip);
         
         TextWatcher twInputChanged = new TextWatcher(){
 			@Override
-			public void onTextChanged(CharSequence arg0, int arg1, int arg2,
-					int arg3) {
+			public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
                 recalculateTip();
 			}
+			
 			@Override
 			public void afterTextChanged(Editable s) {}
+			
 			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {}
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
         };
         
         rbTipRating.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
