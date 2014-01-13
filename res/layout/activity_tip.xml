@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TipActivity" >
+
+    <EditText
+        android:id="@+id/etBillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvBillAmount"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <RatingBar
+        android:id="@+id/rbServiceRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvServiceRating"
+        android:layout_below="@+id/tvServiceRating"
+        android:numStars="3"
+        android:rating="2"
+        android:stepSize="1" />
+
+    <TextView
+        android:id="@+id/tvFinalTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rbServiceRating"
+        android:layout_alignRight="@+id/etBillAmount"
+        android:layout_below="@+id/rbServiceRating"
+        android:layout_marginTop="24dp"
+        android:text="@string/tip_messaging" />
+
+    <TextView
+        android:id="@+id/tvTipRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/rbServiceRating"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@+id/rbServiceRating"
+        android:text="@string/tip_rating_default" />
+
+    <TextView
+        android:id="@+id/tvBillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etBillAmount"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="28dp"
+        android:text="@string/bill_amount" />
+
+    <TextView
+        android:id="@+id/tvServiceRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etBillAmount"
+        android:layout_below="@+id/etBillAmount"
+        android:layout_marginTop="35dp"
+        android:text="@string/rate_service" />
+
+</RelativeLayout>

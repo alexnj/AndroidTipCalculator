@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TipQuick</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="bill_amount">Bill Amount</string>
+    <string name="rate_service">How was the service?</string>
+    <string name="tip_messaging">Enter bill amount, rate the service you received and see the tip amount right here.</string>
+    <string name="tip_strfmt">Tip at %1$.0f%% is %2$.2f. \r\nFinal amount is %3$.2f </string>
+    <string name="tip_rating_default">Good - 15%</string>
+	<string-array name="tip_rating">
+        <item>Okay - 10%</item>
+        <item>Good - 15%</item>
+        <item>Excellent - 20%</item>
+    </string-array>
+</resources>
